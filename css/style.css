@@ -1,0 +1,684 @@
+@font-face {
+    font-family: ALS Schlange sans;
+    src: url(../fonts/ALS\ Schlange\ sans.ttf);
+}
+
+/* Для больших экранов экранов */
+    
+.header {
+    background: url(../image/man_planshet.png) top 100% left 85%/380px 455px   no-repeat,
+                url(../image/picture.png) bottom right/1200px 525px  no-repeat;
+    position: relative;
+    min-height: 548px;
+    margin-top: 170px;     
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+}
+
+.logo-container {
+    position: absolute;
+    top: -135px;
+    left: 370px;
+    z-index: 1;   
+}
+
+.logo-container__logo {
+    padding: 10px;
+    border: 3px solid #FFE600;
+    border-radius: 30px 5px;     
+    text-align: center;
+    line-height: 1;
+    color: #FFFFFF;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.logo-container__text {
+    position: absolute;
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.5em;
+    color: #FFFFFF;
+    margin-top: 10px;   
+}
+
+.nav {
+    position: absolute; 
+    width: 100%;
+    height: 58px;   
+    z-index: 1;
+    top: -30px;
+    background-color:#FFE600;  
+}
+
+.nav  a {
+    color: #000000;
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.semicircle {
+    position: absolute;
+    width:  900px;
+    height: 900px;
+    background-color: #188BC6;
+    border-top-right-radius: 100%; 
+    position: absolute;
+    bottom: 0px;
+    
+    background: repeating-linear-gradient(
+        -45deg,
+        #188BC6,
+        #2993c3 10px,
+        #2993c3 10px,
+        #2993c3 20px
+        );
+}
+
+.title-container {
+    position: absolute;
+    left: 370px;
+    top: 102px;
+    z-index: 1;
+    font-family: ALS Schlange sans;
+    font-weight: 900;
+    font-size: 2.5em;
+    line-height: 50px;
+    color: #FFFFFF;
+}
+
+.title-container__subtitle {
+    color: #FFE600;
+}
+
+.discount { 
+    transform: rotate(-3deg);
+    margin-top: 31px;
+}
+
+.discount__stamp {
+    border: 1px solid #FFFFFF;
+    border-radius: 7px;
+    outline: 5px solid  #FFFFFF;
+    outline-offset: 2px;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    text-align: center; 
+}
+
+.discount__in-tlt {
+    font-size: 0.6em;
+    padding-left: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.rehau-quality {
+    position: absolute;
+    left: 940px;
+    top: 80px;
+    width: 93.9px;
+    height: 97.59px;
+    background: url(../image/Rehau_pink\ 1.png) no-repeat;
+}
+
+.kbe-container {
+    position: absolute;
+    left: 1070px;
+    top: 100px;
+    width: 127px; 
+    height: 72px;
+    background-color: #FFFFFF;
+    border-radius: 100px/50px;
+    padding: 18px;
+}
+
+
+.departure-conteiner {
+    display: none;
+}
+
+.kbe-container__image-for-midle-screen {
+    display: none;
+}
+
+
+.button-get-calculation {
+    position: absolute;
+    top: 500px;
+    left: 1000px;
+    background-color: #F26422;
+    border: 5px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.button-get-calculation__image {
+    float: left;
+    padding-right: 8px;
+}
+
+.button-get-calculation__image,
+.button-get-calculation__title {
+    display: inline;
+}
+
+.button-get-calculation__title {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+.rectangle {
+    height: 248px;
+    background: #9B9A99;
+    margin-bottom: 50px;
+}
+
+.installment-calculator {
+    margin-bottom: 61px;
+}
+
+.installment-calculator__title {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.icon__circle {
+    background: #FFE600;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 27px;
+    margin: 0px auto;
+    width: 121px;
+    height: 119px;
+}
+
+.icon__sm-screen {
+    display: none;
+}
+
+.icon__title{
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;   
+}
+
+.icon__subtitle {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.icon__title,
+.icon__subtitle {
+    text-align: center;
+}
+
+.partner-banks__image-sm-screen {
+    display: none;
+}
+
+/*Стили для ползунков рассрочки*/
+
+.slidecontainer {
+    width: 100%;
+    padding: 15px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background:  #F26422;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #F26422;
+    cursor: pointer;
+}
+
+.slidecontainer__title, .slidecontainer__price {
+    display: inline-block;
+}
+
+.slidecontainer__title {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7em;
+    padding-top: 10px;
+}
+
+.slidecontainer__price {
+    float: right;
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.5em;
+    
+}
+
+.partner-banks {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/*Стили для чека*/
+
+.check {
+    position: relative;
+    margin: 0px auto;
+    width: 368px;
+    min-height: 446px;
+}
+
+.check__rectangle {
+    width: 370px;
+    height: 62px;
+    background: #FFFFFF;
+    border: 20px solid #F2F2F2;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+.check__list {
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    width: 300px;
+    height: 414px;
+    background: #FFFFFF;
+    box-shadow: 1px 20px 30px 0px rgba(34, 60, 80, 0.39);
+    padding-top: 45px;
+    padding-right: 21px;
+    padding-left: 21px;   
+    text-align: center;
+}
+
+.check__info {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.check__info__monthly-payment,
+.check__info__installment-amount {
+    font-size: 3.5em;
+}
+
+.check__info__initial-fee, 
+.check__info__overpayment {
+    font-weight: normal;
+    font-size: 2em;
+    color: #F26422;;
+}
+
+
+.check__button {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1em;
+    background: #F26422;
+    color: #FFFFFF;
+    margin-top: 35px;
+}
+
+.footer-rectangle {
+    height: 248px;
+    background: #C7C7C7;
+}
+
+.footer {
+    position: relative;
+    height: 120px;
+    background: #015A76;
+}
+
+.actions-menu-item {
+    position: absolute;
+    width: 168px;
+    height: 58px;
+    left: 405px;
+    top: 30px;
+    background: #F26422;
+    border: 1px dashed #FFFFFF;
+    outline: 5px solid #F26422;
+    text-align: center;
+    padding-top: 7px;   
+}
+
+
+.actions-menu-item__text {
+    font-family: ALS Schlange sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #FFFFFF;
+}
+
+.actions-menu-item__ico,
+.actions-menu-item__text {
+    display: inline;
+}
+
+@media   (max-width: 768px) { /* Для средних экранов */
+    
+    .header {
+        background: url(../image/man_planshet.png) bottom right 35px/195px 224px   no-repeat,
+                url(../image/picture.png)  bottom  right/600px 259px  no-repeat;
+        min-height: 305px;
+        margin-top: 127px;
+    }
+
+    .logo-container {
+        left: 30px;
+        top: -100px;
+    }
+
+    .logo-container__logo {
+        color: #0a0a0a;
+    }
+
+    .logo-container__text {
+        color: #FFFFFF;
+        color: #D0D0D0;
+    } 
+
+    .nav {
+        height: 46px;
+        top: auto;
+    }
+
+    .semicircle {
+        width:  403px;
+        height: 260px;
+        border-top-right-radius: 90%;
+    }
+
+    .title-container {
+        left: 30px;
+        top: 86px;;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        
+    }
+
+    .discount__stamp {
+        font-size: 0.7em;
+        outline: 0.3em solid  #FFFFFF;
+        outline-offset: 0.1em;
+        border-radius: 0.3em;
+    }
+
+    .discount__in-tlt {
+        font-size: 0.7em;
+    }
+
+    .rehau-quality {
+        position: absolute;
+        left: 402px;
+        top: 73px;
+        width: 66px;
+        height: 69px;
+        background: url(../image/Rehau_pink\ -for-middle-and-small-screen.png) no-repeat;
+    }
+
+    .kbe-container {
+        left: 489px;
+        top: 70px; 
+        width: auto;
+        height: auto;
+        transform: rotate(5deg);
+    }
+
+    .kbe-container__image-for-bid-screen,
+    .button-get-calculation {
+        display: none;
+    }
+
+     .kbe-container__image-for-midle-screen {
+         display: block;
+     }
+
+
+
+    .departure-conteiner {
+        display: none;
+    }
+
+    .partner-banks__image-sm-screen, 
+    .partner-banks__image-sm-screen {
+        display: none;
+    }
+
+    .check {
+        margin-top: 40px;
+    }
+
+    .rectangle {
+        height: 123px;
+    }
+
+    .footer-rectangle {
+        height: 123px;
+    }
+
+    .footer {
+        height: 123px;
+    }
+
+    .actions-menu-item {
+        display: none;  
+    }
+    
+
+}
+@media  (max-width: 390px) { /* Для маленьких экранов */
+    
+    .header {
+        background: url(../image/man_planshet.png) top 50px right 10px/161px 185px  no-repeat,
+                url(../image/picture.png)  top/375px 235px  no-repeat;
+        min-height: 700px;
+        margin-top: 148px;
+    }
+
+    .logo-container {
+        left: 90px;
+        top: -100px;
+    }
+
+    .semicircle {
+        display: none;
+    }
+    
+
+    .kbe-container__image-for-midle-screen {
+        display: block;
+    }
+
+    .title-container {
+        top: 250px;
+        color: #000000;
+        font-size: 2em;
+    }
+
+
+
+    .discount__stamp {
+        border: 0.2em solid #000000;
+        outline: 0.2em  solid #000000;   
+        outline-offset: 2px;
+        font-size: 0.5em;   
+    }
+
+    .departure-conteiner {
+        display: block;
+    }
+    
+    .departure-conteiner {
+        position: absolute;
+        top: 580px;
+        font-family: ALS Schlange sans;
+        font-style: normal;
+        font-weight: bold;
+        width: 90%;
+        margin-left: 5%;
+        
+    }
+
+    .departure-conteiner__free-check-out {
+        background: linear-gradient(266.8deg, #FFF854 0.02%, #FFE03E 101.17%);
+        border-radius: 0.5em;
+        padding-top: 5px;
+        line-height: 1.5em;
+        
+    }
+
+    .departure-conteiner__title {
+        font-size: 1.5em;
+    }
+    
+    .departure-conteiner__day-of-appeal {
+        border: 0.1em solid #F26422;
+        border-radius:  0.3em;
+        color: #F26422;
+        width: 80%;
+        margin-left: 10%;
+        font-size: 0.8em;
+        margin-top: 5px;
+        padding: 3px;
+        padding-top: 7px;
+
+    }
+
+    .rehau-quality {
+        top: 65px;
+        left: 27px;
+    }
+
+    .kbe-container {
+        top: 70px;
+        left: 108px;
+    }
+
+    .installment-calculator__title {
+        font-size: 1.3em;
+    }
+
+    .icon__image-lg-screen {
+        display: none;
+    }
+
+    .icon__sm-screen {
+        display: block;
+    }
+
+    .icon__circle {
+        width: 66px;
+        height: 65px;
+        padding: 15px;
+        margin-bottom: 12px;
+        
+    }
+
+    .icon__title {
+        font-size: 0.6em;
+    }
+
+    .icon__subtitle {
+        font-size: 0.9em;
+    }
+
+    .slidecontainer__title {
+        font-size: 1em;
+        padding-top: 0px;
+    }
+
+    .slidecontainer__price {
+        font-size: 1em;
+    }
+
+    .partner-banks {
+        font-size: 0.8em;
+       
+    }
+
+    .partner-banks__image-lg-screen {
+        display: none;
+    }
+
+    .partner-banks__image-sm-screen {
+        display: block;
+    }
+
+    .check {
+        width: auto;
+    }
+
+    .check__rectangle {
+        width: 324px;
+        height: 56px;
+    }
+
+    .check__list {
+        width: 264.62px;
+        height: 369.21px;
+        padding: 0px; 
+        padding-top: 45px;
+    }
+
+
+    .check__button {
+        width: 90%;
+        margin: 0px auto;
+        height: 30px;
+    }
+
+}
+
+  
+    
+
+  
